@@ -1,0 +1,147 @@
+/* ================================================================== */
+/* === Resolution independent styles ================================ */
+/* ================================================================== */
+
+/* Reset */
+a, abbr, acronym, address, applet, article, aside, audio,
+b, blockquote, big, body,
+center, canvas, caption, cite, code, command,
+datalist, dd, del, details, dfn, dl, div, dt, 
+em, embed,
+fieldset, figcaption, figure, font, footer, form, 
+h1, h2, h3, h4, h5, h6, header, hgroup, html,
+i, iframe, img, ins,
+kbd, 
+keygen,
+label, legend, li, 
+meter,
+nav,
+object, ol, output,
+p, pre, progress,
+q, 
+s, samp, section, small, span, source, strike, strong, sub, sup,
+table, tbody, tfoot, thead, th, tr, tdvideo, tt,
+u, ul, 
+var{
+    background: transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline; }
+
+/* HTML5 reset */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{ display: block; }
+mark, rp, rt, ruby, summary, time{ display: inline }
+
+/* Custom fonts */
+@font-face {
+    font-family: 'ModernPictogramsNormal';
+    src: url('fonts/modernpictograms/modernpics-webfont.eot');
+    src: url('fonts/modernpictograms/modernpics-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/modernpictograms/modernpics-webfont.woff') format('woff'),
+         url('fonts/modernpictograms/modernpics-webfont.ttf') format('truetype'),
+         url('fonts/modernpictograms/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
+    font-weight: normal;
+    font-style: normal; }
+
+/* Proper box model */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* General styles */
+::-moz-selection {  }
+::selection {  }
+
+a{  
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s; }
+
+a:hover{  }
+a:active{  }
+a:visited{  }
+
+address{  }
+
+aside{  }
+
+b, strong{  }
+
+body{  }
+
+blockquote{  }
+
+button{ cursor: pointer; }
+button:hover{  }
+button:active{  }
+
+caption, th, td{ vertical-align: middle; }
+
+h1{  }
+h2{  }
+h3{  }
+h4{  }
+h5{  }
+h6{  }
+
+i, em{  }
+
+img{  }
+
+input, select, textarea{  }
+
+input[type=radio]{  }
+input[type=checkbox]{  }
+
+label{  }
+
+li{  }
+
+p{ margin:0 0 1em 0; }
+
+select{  }
+select option{  }
+
+table{ border: 0; border-spacing:0; empty-cells:show; }
+
+textarea{ resize: none; }
+
+ul, ol{  }
+
+/* Custom styles */
+/*aside, div, dl, fieldset, footer, form, header, iframe, nav, ul, ol, section, table{ clear: both; float: left; width: 100%; }*/
+
+
+/* ================================================================== */
+/* === Responsive styles ============================================ */
+/* ================================================================== */
+
+/* Smartphones */
+@media only screen and (max-width: 469px) {
+
+}
+
+/* Large smartphones */
+@media only screen and (min-width: 470px) and (max-width: 699px) {
+
+}
+
+/* Tablets and landscape large smartphones */
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+
+}
+
+/* Desktop screens */
+@media only screen and (min-width: 1200px) and (max-width: 1499px){
+
+}
+
+/* Large screen */
+@media only screen and (min-width: 1500px) and (max-width: 1799px){
+
+}
+
+/* Very large screen */
+@media only screen and (min-width: 1800px){
+
+}
