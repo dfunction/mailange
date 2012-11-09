@@ -39,13 +39,12 @@ body {
 	width: 350px; height: 50px;
 	font-family: "PT Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: normal;
-	font-size: 24px;
+	font-size: 26px;
 	color: #f1faff;
 	text-shadow: 2px 2px 4px rgba(0,0,0,.5);
 }
 
 #wrapper {
-	/*background: #25282d url('../img/wrapper_bg.jpg') repeat-x left top;*/
 	background-image: linear-gradient(bottom, rgb(34,34,34) 80%, rgb(37,40,45) 90%);
 	background-image: -o-linear-gradient(bottom, rgb(34,34,34) 80%, rgb(37,40,45) 90%);
 	background-image: -moz-linear-gradient(bottom, rgb(34,34,34) 80%, rgb(37,40,45) 90%);
@@ -72,17 +71,69 @@ h1 {
 	width: 700px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 50px 0;
+	padding-top: 50px;
+	text-shadow: 1px 1px 0 rgba(0,0,0,1);
 }
 
 h1 span {
 	color: #ca333a;
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 48px;
 }
 
-p {
-	width: 700px;
+#content1 {
+	width: 800px;
 	margin: 0 auto;
+	height: 250px;
+}
+
+#content1 h2 {
+	color: #c2c8cc;
+	text-align: center;
+	font-size: 24px;
+	padding-bottom: 16px;
+	padding-top: 50px;
+	font-weight: 400;
+	text-shadow: 1px 1px 0 rgba(0,0,0,1);
+}
+
+section {
+	width: 400px;
+	float: left;
+}
+
+.striped {
+	width: 300px;
+	height: 175px;
+	display: block;
+	background: #f1faff url('../img/stripes.png') repeat left top;
+	padding: 10px;
+	box-shadow: 1px 1px 40px #111,
+		inset 0px 0px 40px rgba(0,0,0,.1),
+		inset 0px 0px 40px rgba(255,255,255,.1);
+	margin: 0 auto;
+	border-radius: 5px;
 	display: none;
+}
+
+.address {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: #f1faff;
+	color: #25282d;
+	position: relative;
+	background: #f1faff url('../img/stamp.png') no-repeat right top;
+}
+
+.address span {
+	position: absolute;
+	font-size: 24px;
+	height: 24px;
+	width: 164px;
+	margin-top: 50%;
+	margin-left: 50%;
+	text-align: center;
+	top: -12px;
+	left: -82px;
 }

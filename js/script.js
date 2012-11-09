@@ -2,17 +2,22 @@ $(function() {
 	// ANIMATION
 	var users = "What users will see:";
 	var crawlers = "What crawlers will see:";
+	$window = $(window);
 	
-	$("#hero").height($(window).height() - 140);
-	$("#wrapper").css({top: $(window).height() - 140});
+	$("#hero").height($window.height() - 140);
+	$("#wrapper").css({top: $window.height() - 140});
 	
-	//$("#wrapper").height($(window).height());
-	$("#wrapper").waypoint(function(event, direction) {
+	$("#content1").waypoint(function(event, direction) {
 		if (direction == "down")
-			$("p").fadeIn();
-		else $("p").fadeOut();
-	}, {offset: "50%"});
+			$($("#content1 section:first-child .striped")).fadeIn(1000, function() {
+				$("#content1 section:last-child .striped").fadeIn(1000);
+			});
+	}, {offset: "50%", triggerOnce: true});
 
+	$(window).resize(function() {
+		$("#hero").height($window.height() - 140);
+		$("#wrapper").css({top: $window.height() - 140});
+	});
 
 	// GET HASH
 	$("#send").click(function() {
