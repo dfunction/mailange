@@ -8,6 +8,8 @@ $(function() {
 	var $hero = $("#hero");
 	var $wrapper = $("#wrapper");
 	
+	var navState = "absolute";
+	
 	(function installWaypoints() {
 		$.waypoints.settings.scrollThrottle = 30;
 		
@@ -17,12 +19,17 @@ $(function() {
 		$window.resize(function() {
 			$hero.height($window.height());
 			$wrapper.css({top: $window.height()});
+			if (navState == "fixed"){
+				$("#nav").css({position: navState, top: 0});
+			} else {
+				$("#nav").css({position: navState, top: $window.height()-$nav.outerHeight()});
+			}
 		});
 		$("#nav").waypoint(function(event, direction) {
 			if (direction == "down"){
-				$("#nav").css({position: "fixed", top: 0});
+				$("#nav").css({position: navState = "fixed", top: 0});
 			} else {
-				$("#nav").css({position: "absolute", top: $window.height()-$nav.outerHeight()});
+				$("#nav").css({position: navState = "absolute", top: $window.height()-$nav.outerHeight()});
 			}
 			event.stopPropagation();
 		}, {offset: 0});
