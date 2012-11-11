@@ -14,7 +14,7 @@ app.debug = True
 r = None
 characterSet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','!','#','$','%','&#x26;',"'",'*','+','-','/','=','?','^','_','`','{','|','}','~','.','&#x22;','(',')',',',':',';','&#x3c;','&#x3e;','@','[','\\',']']
 clearCharacterSet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','!','#','$','%','&',"'",'*','+','-','/','=','?','^','_','`','{','|','}','~','.','"','(',')',',',':',';','<','>','@','[','\\',']']
-fontFile = "courier-webfont.svg"
+fontFile = "/home/www/mailange/courier-webfont.svg"
 docHeader = '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" ><svg xmlns="http://www.w3.org/2000/svg"><metadata>Intelligible</metadata><defs>'
 font = None
 fontHeader = None
