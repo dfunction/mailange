@@ -2,22 +2,38 @@ $(function() {
 	// ANIMATION
 	var users = "What users will see:";
 	var crawlers = "What crawlers will see:";
-	$window = $(window);
 	
-	$("#hero").height($window.height() - 140);
-	$("#wrapper").css({top: $window.height() - 140});
+	var $window = $(window);
+	var $nav = $("#nav");
+	var $hero = $("#hero");
+	var $wrapper = $("#wrapper");
 	
-	$("#content1").waypoint(function(event, direction) {
-		if (direction == "down")
-			$($("#content1 section:first-child .striped")).fadeIn(1000, function() {
-				$("#content1 section:last-child .striped").fadeIn(1000);
-			});
-	}, {offset: "50%", triggerOnce: true});
-
-	$(window).resize(function() {
-		$("#hero").height($window.height() - 140);
-		$("#wrapper").css({top: $window.height() - 140});
-	});
+	(function installWaypoints() {
+		$.waypoints.settings.scrollThrottle = 30;
+		
+		$hero.height($window.height());
+		$wrapper.css({top: $window.height()});
+		$nav.css({top: $window.height()-$nav.outerHeight()});
+		$window.resize(function() {
+			$hero.height($window.height());
+			$wrapper.css({top: $window.height()});
+		});
+		$("#nav").waypoint(function(event, direction) {
+			if (direction == "down"){
+				$("#nav").css({position: "fixed", top: 0});
+			} else {
+				$("#nav").css({position: "absolute", top: $window.height()-$nav.outerHeight()});
+			}
+			event.stopPropagation();
+		}, {offset: 0});
+		$("#about").waypoint(function(event, direction) {
+			if (direction == "down")
+				$($("#about .striped")[0]).fadeIn(1000, function() {
+					$($("#about .striped")[1]).fadeIn(1000);
+				});
+			event.stopPropagation();
+		}, {offset: "50%", triggerOnce: true});
+	})();
 
 	// GET HASH
 	$("#send").click(function() {
@@ -74,5 +90,6 @@ $(function() {
 	}
 
 });
+
 
 //url("data:font/opentype;base64,[base-encoded font here]");
