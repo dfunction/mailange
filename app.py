@@ -38,9 +38,10 @@ def register():
         return json.dumps({"result":"Error: No email parameter specified"})
         
 
-@app.route("/retrieve/<emailHash>", methods=["GET"])
-def retrieve(emailHash):
-    if (emailHash != ""):
+@app.route("/retrieve", methods=["POST"])
+def retrieve():
+    if ((request.form != None) and (request.form["hash"] != "")):
+        emailHash = request.form["hash"]
         if r.get(emailHash) != None:
             return json.dumps({"result" : "Success", "font" : base64.b64encode(generateFont()), "email" : findEmail(r.get(emailHash))})
         else:
