@@ -30,15 +30,15 @@ body {
 
 #hero img {
 	position: absolute;
-	margin: 50% auto auto 50%;
-	top: -186px; left: 100px;
+	top: 50%; left: 50%;
+	margin: -186px auto auto 100px;
 	width: 300px; height: 300px;
 }
 
 #hero_message {
 	position: absolute;
-	margin: 50% auto auto 50%;
-	top: -61px; left: -400px;
+	top: 50%; left: 50%;
+	margin: -61px auto auto -400px;
 	width: 400px; height: 50px;
 	font-family: "PT Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: normal;
@@ -191,11 +191,9 @@ body {
 		font-size: 24px;
 		height: 24px;
 		width: 164px;
-		margin-top: 50%;
-		margin-left: 50%;
+		top: 50%; left: 50%;
 		text-align: center;
-		top: -12px;
-		left: -82px;
+		margin: -12px auto auto -82px;
 	}
 	
 	/* @end */
